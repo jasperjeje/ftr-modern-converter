@@ -221,35 +221,35 @@ class CrossPlatformBuilder:
     def create_readme_content(self):
         """创建README内容"""
         return f"""
-{self.app_display_name} v{self.app_version}
+Modern File Converter v{self.app_version}
 =====================================================
 
-🚀 现代化的文件转换工具
+🚀 A modern and powerful file conversion tool
 
-## 功能特性
-✨ 支持PDF转Markdown功能
-📄 支持多种文档格式转换 (PDF ↔ DOCX)
-🖼️ 支持图像格式转换 (JPG/PNG/GIF/BMP)
-📊 支持表格格式转换 (CSV ↔ XLSX)
-🎨 现代化用户界面
-🌍 跨平台支持 (Windows/macOS/Linux)
+## Features
+✨ PDF to Markdown conversion
+📄 Multiple document format support (PDF ↔ DOCX)
+🖼️ Image format conversion (JPG/PNG/GIF/BMP)
+📊 Spreadsheet format conversion (CSV ↔ XLSX)
+🎨 Modern user interface
+🌍 Cross-platform support (Windows/macOS/Linux)
 
-## 系统要求
+## System Requirements
 - {self.system} 10.14+ (macOS) / Windows 10+ / Linux
-- 无需额外安装Python或依赖包
+- No additional Python installation required
 
-## 使用方法
-1. 双击运行可执行文件
-2. 选择源文件
-3. 选择目标格式
-4. 点击转换
+## Usage
+1. Double-click the executable file
+2. Select source file
+3. Choose target format
+4. Click convert
 
-## 技术支持
-- 版本: {self.app_version}
-- 构建时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-- 平台: {self.system}
+## Technical Information
+- Version: {self.app_version}
+- Build Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+- Platform: {self.system}
 
-更多信息请访问项目主页。
+For more information, visit the project homepage.
 """
         
     def run(self):

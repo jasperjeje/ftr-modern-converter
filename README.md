@@ -1,180 +1,209 @@
-# 🚀 现代文件转换器
+# Modern File Converter
 
-这是一个基于Python开发的跨平台文件转换工具，支持Windows和macOS系统。现在包含全新的现代化界面和PDF转Markdown功能！
+> 🚀 A modern and powerful file conversion tool | 现代化的文件转换工具
+
+[中文版本](README_zh.md) | [English Version](README.md)
 
 <div align="center" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
   <img src="./images/image.png" alt="现代文件转换器 - 启动中心" width="48%" style="max-width: 400px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
   <img src="./images/image2.png" alt="现代文件转换器 - 转换界面" width="48%" style="max-width: 400px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
 </div>
-<br>
-## ✨ 最新功能
 
-### 🎨 现代化界面
-- **全新设计**：采用现代化设计风格，更加美观易用
-- **交互提升**：更直观的操作流程和视觉反馈
-- **双界面选择**：可选择现代界面或经典界面
+## Features
 
-### 📋 PDF转Markdown (新增!)
-- **智能转换**：自动识别标题、列表等结构
-- **格式保留**：尽可能保持原文档的层次结构
-- **文本优化**：优化排版，生成易读的Markdown
+✨ **PDF to Markdown Conversion** - Convert PDF documents to Markdown format  
+📄 **Document Format Support** - Convert between PDF and DOCX formats  
+🖼️ **Image Format Support** - Convert between JPG, PNG, GIF, and BMP formats  
+📊 **Spreadsheet Support** - Convert between CSV and XLSX formats  
+🎨 **Modern UI Design** - Clean and intuitive user interface  
+🌍 **Cross-Platform** - Works on Windows, macOS, and Linux  
+🔄 **Dynamic Format Detection** - Automatically shows available conversion options  
+🔧 **Smart Encoding** - Handles different file encodings across platforms  
 
-## 🚀 快速开始
+## System Requirements
 
-### 安装依赖
+- **Windows**: Windows 10 or later
+- **macOS**: macOS 10.14 (Mojave) or later
+- **Linux**: Modern Linux distributions
+- **Dependencies**: All required libraries are bundled in the executable
+
+## Installation & Usage
+
+### Option 1: Download Pre-built Executable
+
+1. Download the latest release for your platform from the releases page
+2. Extract the files (Windows) or copy the .app bundle (macOS)
+3. Run the executable file
+
+### Option 2: Build from Source
+
+#### Prerequisites
+- Python 3.7 or later
+- pip package manager
+
+#### Installation
 ```bash
-# 激活虚拟环境
-source venv/bin/activate
+# Clone the repository
+git clone [repository-url]
+cd ftr
 
-# 安装依赖包
+# Install dependencies
 pip install -r requirements.txt
-```
 
-### 启动应用
-```bash
-# 方式1：一键启动（推荐）
+# Run the application
 python start.py
-
-# 方式2：界面选择器
-python launcher.py
-
-# 方式3：直接启动现代界面
-python modern_ui.py
-
-# 方式4：直接启动经典界面
-python main.py
-
-# 方式5：命令行模式
-python cli.py --help
 ```
 
-## 📁 支持的文件格式
+#### Building Executable
 
-### 文档类
-- **PDF ↔ DOCX**
-- **PDF → Markdown** ✨ 新增功能
+**For Windows:**
+```bash
+# Run the build script
+build_windows_new.bat
+```
 
-### 图像类
-- **JPG/JPEG ↔ PNG ↔ GIF ↔ BMP**
-- **图像 → PDF**
+**For macOS:**
+```bash
+# Make the script executable
+chmod +x build_macos_new.sh
 
-### 表格类
-- **CSV ↔ XLSX**
-- **CSV/XLSX → PDF**
+# Run the build script
+./build_macos_new.sh
+```
 
-## 🎯 功能特性
+**Cross-Platform Build:**
+```bash
+# Use the universal build script
+python build_cross_platform.py
+```
 
-- **多格式支持**：支持文档、图像、表格等多种文件格式转换
-- **现代界面**：基于tkinter的现代化图形用户界面
-- **经典界面**：保留原有的简洁界面风格
-- **跨平台**：支持Windows和macOS系统
-- **实时反馈**：转换过程中显示进度和详细日志信息
-- **智能推荐**：根据源文件类型智能推荐目标格式
+## How to Use
 
-## 🔧 使用说明
+1. **Launch the Application**
+   - Double-click the executable file
+   - Choose your preferred interface (Classic or Modern)
 
-1. 运行 `python start.py` 一键启动（推荐）
-2. 或运行 `python launcher.py` 启动界面选择器
-3. 选择现代界面或经典界面
-4. 点击"浏览文件"选择要转换的源文件
-5. 选择目标格式（支持按钮点击选择）
-6. 选择输出位置（可自动生成）
-7. 点击"开始转换"
-8. 查看转换日志和结果
+2. **Select Source File**
+   - Click "Browse" to select your input file
+   - Supported formats will be automatically detected
 
-## 📦 系统要求
+3. **Choose Target Format**
+   - Available conversion options will be displayed
+   - Select your desired output format
 
-- **Python 3.7+**
-- **Windows 10+ 或 macOS 10.14+**
-- **依赖包**：见 requirements.txt
+4. **Convert**
+   - Click "Start Conversion"
+   - Monitor progress in the status bar
+   - Find your converted file in the same directory
 
-## 🛠 技术架构
+## Supported Formats
 
-- **GUI框架**：tkinter
-- **图像处理**：Pillow (PIL)
-- **文档处理**：python-docx, PyPDF2, reportlab
-- **表格处理**：pandas, openpyxl
-- **打包工具**：PyInstaller
+### Document Conversion
+- **PDF** ↔ **DOCX**: Bidirectional document conversion
+- **PDF** → **Markdown**: Convert PDF to Markdown with intelligent formatting
 
-## 📂 项目结构
+### Image Conversion
+- **JPG** ↔ **PNG** ↔ **GIF** ↔ **BMP**: Convert between image formats
+- **TIFF** → **JPG/PNG**: Convert TIFF images to common formats
 
+### Spreadsheet Conversion
+- **CSV** ↔ **XLSX**: Convert between CSV and Excel formats
+- **XLS** → **XLSX**: Upgrade legacy Excel files
+
+## Features in Detail
+
+### PDF to Markdown Conversion
+- Extracts text content from PDF files
+- Preserves basic formatting structure
+- Handles multiple pages
+- Creates clean, readable Markdown output
+
+### Modern Interface
+- Card-based layout design
+- Real-time format availability
+- Progress tracking
+- Responsive design
+
+### Cross-Platform Compatibility
+- Native file encoding handling
+- Platform-specific optimizations
+- Consistent behavior across systems
+
+## Technical Details
+
+### Built With
+- **Python 3.13** - Core application language
+- **Tkinter** - GUI framework
+- **PyPDF2** - PDF processing
+- **Pillow** - Image processing
+- **pandas** - Data manipulation
+- **python-docx** - Word document handling
+- **ReportLab** - PDF generation
+
+### Architecture
+- Modular design with separate UI and conversion logic
+- Thread-safe file operations
+- Dynamic format detection system
+- Cross-platform encoding management
+
+## Development
+
+### Project Structure
 ```
 ftr/
-├── start.py                 # 一键启动入口（推荐）
-├── launcher.py              # 界面选择器
-├── modern_ui.py             # 现代化界面
-├── main.py                  # 经典界面
-├── cli.py                   # 命令行版本
-├── file_converter.py        # 核心转换模块
-├── requirements.txt         # 依赖包列表
-├── build_windows.bat        # Windows打包脚本
-├── build_macos.sh           # macOS打包脚本
-└── README.md               # 项目说明文档
+├── start.py              # Main application launcher
+├── modern_ui.py          # Modern interface implementation
+├── file_converter.py     # Core conversion logic
+├── launcher.py           # Interface selection
+├── requirements.txt      # Python dependencies
+├── build_cross_platform.py  # Build script
+└── README.md            # This file
 ```
 
-## 🚀 打包可执行文件
+### Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-### Windows
-```bash
-build_windows.bat
-```
+## Version History
 
-### macOS
-```bash
-chmod +x build_macos.sh
-./build_macos.sh
-```
+### v2.2.0 (Current)
+- ✅ PDF to Markdown conversion
+- ✅ Modern UI redesign
+- ✅ Dynamic format detection
+- ✅ Cross-platform encoding fixes
+- ✅ Unified packaging system
 
-打包后的可执行文件将在 `dist` 目录中。
+### v2.1.0
+- Added modern interface option
+- Improved file format support
+- Enhanced error handling
 
-## 📝 更新日志
+### v2.0.0
+- Complete UI redesign
+- Added multiple format support
+- Improved conversion accuracy
 
-### v2.2 - 界面和兼容性修复版本
-- ✅ **窗口高度修复**：现代界面从1200x800增加到1200x900
-- ✅ **动态格式展示**：根据源文件智能显示可用的目标格式
-- ✅ **编码兼容性**：Windows使用UTF-8-sig，macOS使用UTF-8
-- ✅ **智能按钮状态**：不支持的格式自动禁用，防止无效转换
+## Support
 
-### v2.1 - 启动器界面优化
-- ✅ **启动器优化**：窗口从400x300扩大到550x650
-- ✅ **卡片设计**：现代化的界面选择体验
-- ✅ **功能展示**：详细的特性介绍和使用指导
+If you encounter any issues or have questions:
 
-### v2.0 - 现代化版本
-- ✅ **PDF转Markdown**：智能识别文档结构
-- ✅ **现代界面**：全新的UI设计和交互体验
-- ✅ **界面优化**：修复显示问题，提升可用性
-- ✅ **按钮优化**：改进颜色对比度和布局
+1. Check the [FAQ section](docs/FAQ.md)
+2. Review existing [issues](issues)
+3. Create a new issue with detailed information
 
-## ⚠️ 注意事项
+## License
 
-1. 某些复杂的PDF文件转换可能会丢失格式信息
-2. 图像转换会尽可能保持原始质量
-3. 大文件转换可能需要较长时间，请耐心等待
-4. 建议在转换前备份重要文件
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🐛 故障排除
+## Acknowledgments
 
-如果遇到转换失败：
-1. 检查源文件是否完整且未损坏
-2. 确保有足够的磁盘空间
-3. 验证输出路径是否有写入权限
-4. 查看转换日志中的错误信息
-
-## 📄 许可证
-
-本项目采用 Apache 2.0 许可证。详情请参阅 [LICENSE](LICENSE) 文件。
-
-### 许可证摘要
-- ✅ 商业使用
-- ✅ 修改
-- ✅ 分发
-- ✅ 专利使用
-- ✅ 私人使用
-- ⚠️ 需要包含许可证和版权声明
-- ⚠️ 需要说明修改内容
+- Thanks to all contributors and testers
+- Special thanks to the Python community for excellent libraries
+- UI design inspired by modern application standards
 
 ---
 
-**🎉 感谢使用现代文件转换器！**  
-如有问题或建议，欢迎反馈。
+**Modern File Converter** - Making file conversion simple and beautiful.
